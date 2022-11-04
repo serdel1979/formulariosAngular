@@ -18,8 +18,10 @@
             <div class="input-group">
                 <input class="form-control"
                     placeholder="Favorito..."
+                    (keyup.enter)="agregar()"
                     >
-                <button  class="btn btn-outline-primary" type="button">
+                <button  class="btn btn-outline-primary" type="button"
+                    (click)="agregar()">
                     Agregar
                 </button>
             </div>
@@ -31,6 +33,7 @@
         <label class="col-sm-3 col-form-label">Favoritos</label>
         <div class="col-sm-9">
 
+            <!--
             <div  class="input-group mb-1">
 
                 <input class="form-control"
@@ -43,7 +46,7 @@
 
 
             </div>
-
+            -->
 
         </div>
     </div>
@@ -60,7 +63,7 @@
 </form>
 
 <!--
-    
+
 <span>Persona</span>
 <pre>{{ persona | json}}</pre>
 
