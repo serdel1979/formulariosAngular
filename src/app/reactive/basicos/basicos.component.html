@@ -5,13 +5,14 @@
 <div class="row">
     <div class="col">
 
-        <form autocomplete="off">
+        <form autocomplete="off" [formGroup]="miFormulario">
             <!--Campo Producto-->
             <div class="mb-3 row">
                 <label class="col-sm-3 col-form-label">Producto</label>
                 <div class="col-sm-9">
 
-                    <input type="text" class="form-control" placeholder="Nombre del producto">
+                    <input type="text" class="form-control" placeholder="Nombre del producto"
+                    formControlName="nombre">
 
                     <span class="form-text text-danger">Debe
                         ser de 3 letras</span>
@@ -22,7 +23,8 @@
             <div class="mb-3 row">
                 <label class="col-sm-3 col-form-label">Precio</label>
                 <div class="col-sm-9">
-                    <input type="number" class="form-control"  placeholder="Precio del producto">
+                    <input type="number" class="form-control"  placeholder="Precio del producto"
+                    formControlName="precio">
 
                     <span class="form-text text-danger">Debe ser mayor a cero</span>
 
@@ -34,7 +36,8 @@
                 <label class="col-sm-3 col-form-label">Existencias del producto</label>
                 <div class="col-sm-9">
                     <input type="number" class="form-control" 
-                    placeholder="Existencias del producto">
+                    placeholder="Existencias del producto"
+                    formControlName="existencias">
                 </div>
             </div>
 
@@ -52,8 +55,7 @@
     </div>
 </div>
 
-<!--
-    
+
 <div class="row">
     <div class="col">
 
@@ -79,5 +81,3 @@
 
     </div>
 </div>
-
--->
