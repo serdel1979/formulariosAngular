@@ -34,9 +34,10 @@
                         placeholder="Ingresar email"
                         formControlName="email"
                         >
-                        <span  *ngIf="campoNoValido('email')"  class="form-text text-danger">
-                            El correo es obligatorio
+                        <span *ngIf="campoNoValido('email')" class="form-text text-danger">
+                            {{ emailErrorMsg }}
                         </span>
+                        
 
                 </div>
             </div>
@@ -96,7 +97,10 @@
 
             <div class="row">
                 <div class="col">
-                    <button class="btn btn-primary float-end" type="submit">
+                    <button 
+                        [disabled]="miFormulario.pending"
+                        class="btn btn-primary float-end" 
+                        type="submit">
                         Registrar
                     </button>
                 </div>
@@ -107,7 +111,10 @@
     </div>
 </div>
 
+
+<h2>Form Status: {{ miFormulario.status }}</h2>
 <h2>Form valid: {{ miFormulario.valid }}</h2>
+<h2>Form Pending: {{ miFormulario.pending }}</h2>
 <h2>Form errors:</h2>
 <pre>
     {{ miFormulario.errors | json }}
